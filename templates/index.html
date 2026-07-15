@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Screening System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Resume Screening System</h1>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+<label><b>Upload Resume (PDF)</b></label><br><br>
+
+<input type="file" name="resume" accept=".pdf" required>
+
+<br><br>
+
+<label><b>Job Description</b></label><br><br>
+
+<textarea
+name="jobdescription"
+rows="8"
+placeholder="Enter Job Description here..."
+required></textarea>
+
+<br><br>
+
+<button type="submit">Check Resume</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
